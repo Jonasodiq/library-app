@@ -46,13 +46,13 @@ This is a simple library management system implemented in Java. The system allow
 
 ## Example
 ```
-📚Add book-1 
-👀Show books-2 
-📦Loan book-3
-📤Return book-4 
-🔍Search books-5
-🏆Reserve a book-6
-➡️Exit-7
+📚 Add book-1 
+👀 Show books-2 
+📦 Loan book-3
+📤 Return book-4 
+🔍 Search books-5
+🏆 Reserve a book-6
+➡️ Exit-7
 
 Choose an option: 1 Enter title: Java Programming Enter author: John Doe Enter year: 2023 Enter edition: 1
 ```
