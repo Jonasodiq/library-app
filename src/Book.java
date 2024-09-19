@@ -37,8 +37,47 @@ public class Book {
         return edition;
     }
 
+    // Loan the book
+    public void loanBook() {
+        if (!isLoaned) {
+            isLoaned = true; // Om boken inte är utlånad, sätt isLoaned till true
+            System.out.println("\uD83D\uDCD7 " + title + " has been loaned! ✅");
+        } else { // Om boken redan är utlånad, skriv ett meddelande
+            System.out.println("⚠️ " + title + " is already loaned. ⛔");
+        }
+    }
 
+    // Return the book
+    public void returnBook() {
+        if (isLoaned) {
+            isLoaned = false;// Om boken är utlånad, markera den som returnerad
+            System.out.println("\uD83D\uDCD9 " + title + " has been returned! 🎉");
+            // Check for reservations / Kontrollera om någon har reserverat boken
+            if (!reservationList.isEmpty()) {
+                String firstInLine = reservationList.remove(0); // Ta bort den första personen i reservlistan
+                System.out.println("📘 The book is now reserved for " + firstInLine + ". \uD83D\uDDC2");
+                isLoaned = true;  // Boken lånas till den första i reservlistan
+            }
+        } else { // Om boken inte var utlånad, visa detta
+            System.out.println("⚠️ " + title + " was not loaned. ⏳");
+        }
+    }
 
+    // Reserve the book
+    public void reserve(String userName) {
+        if (isLoaned) {
+            reservationList.add(userName); // Om boken är utlånad, lägg till användaren i reservlistan
+            System.out.println("✅ " + userName + " has reserved the book: " + title + " 📚");
+        } else { // Om boken är tillgänglig, informera användaren
+            System.out.println("✅ The book is available and can be loaned! 📖");
+        }
+    }
+
+    @Override
+    public String toString() { // Ge info om boken
+        return "📗 Title: " + title + ", 🖋Author: " + author + ", 📅 Year: " + year + ", 📑 Edition: " + edition +
+                (isLoaned ? " (🔒 Loaned)" : " (🔓 Available)");
+    }
 }
 
 //Instansvariabler:
