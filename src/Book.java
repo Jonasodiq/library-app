@@ -1,4 +1,42 @@
+import java.util.ArrayList;
+
 public class Book {
+
+    // Instansvariabel
+    private String title;
+    private String author; // Ny instansvariabel för författare
+    private int year;
+    private String edition;
+    private boolean isLoaned;
+    private ArrayList<String> reservationList;
+
+    // Constructor
+    public Book(String title, String author, int year, int edition) {
+        this.title = title;
+        this.author = author;  // Sätter författaren
+        this.year = year;
+        this.edition = String.valueOf(edition);
+        this.isLoaned = false;
+        this.reservationList = new ArrayList<>();
+    }
+
+    // Getters
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getEdition() {
+        return edition;
+    }
+
 
 
 }
