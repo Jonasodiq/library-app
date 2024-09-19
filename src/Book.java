@@ -81,7 +81,6 @@ public class Book {
 }
 
 //Instansvariabler:
-//
 //title: String
 //author: String
 //year: int
