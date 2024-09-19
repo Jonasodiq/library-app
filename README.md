@@ -44,7 +44,7 @@ This is a simple library management system implemented in Java. The system allow
 2. **Choose an Option**: Select an option from the menu to interact with the library.
 3. **Follow Prompts**: Provide the necessary inputs as prompted by the application.
 
-## Example
+## Menu
 ```
 📚 Add book-1 
 👀 Show books-2 
